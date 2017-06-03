@@ -20,25 +20,25 @@ public class GoodsServiceImpl implements GoodsService{
 		this.dao = dao;
 	}
 
-	@Override
+	
 	public Goods districtQuery(Goods goods) {
 		// TODO Auto-generated method stub
 		return (Goods) dao.findByHql("from goods where goodsDistrict = "+goods.getGoodsdistrict());
 	}
 
-	@Override
+	
 	public Goods getByGoodsId(int id) {
 		
 		return dao.findById(id);
 	}
 
-	@Override
+	
 	public List<Goods> getGoodsAll(Goods goods) {
 		
 		return dao.findAll();
 	}
 
-	@Override
+	
 	public void updateGoods(Goods goods) {
 		 goods =dao.findById(goods.getId());
 		 dao.update(goods);

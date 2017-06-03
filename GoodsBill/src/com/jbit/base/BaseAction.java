@@ -12,12 +12,10 @@ public class BaseAction extends ActionSupport implements RequestAware,SessionAwa
 	private Map<String, Object> request;
 	private Map<String,Object> session;
 
-	@Override
 	public void setRequest(Map<String, Object> request) {
 		this.request=request;
 	}
 
-	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session=session;
 	}
